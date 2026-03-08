@@ -1,0 +1,5 @@
+services:
+  host1:
+    build: .
+    privileged: true
+    tty: true
