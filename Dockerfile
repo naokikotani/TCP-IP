@@ -3,16 +3,24 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
+    bash \
+    coreutils \
+    grep \
     iproute2 \
     iputils-ping \
-    tcpdump \
-    net-tools \
     traceroute \
+    tcpdump \
+    bind9-dnsutils \
+    dnsmasq-base \
+    netcat-openbsd \
+    python3 \
     curl \
     wget \
     iptables \
-    netcat-openbsd \
-    dnsutils \
+    procps \
+    isc-dhcp-client \
+    sudo \
+    net-tools \
     && rm -rf /var/lib/apt/lists/*
 
 CMD ["/bin/bash"]
